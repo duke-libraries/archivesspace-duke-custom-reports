@@ -24,18 +24,18 @@ class AccessionAccessionsLackingExtentLinearFeet < AbstractReport
 
   def query_string
       "SELECT 
-      accession.identifier,
-      accession.title,
-      extent.number,
-      enumeration_value.value
-      FROM
-        accession
+    accession.identifier,
+    accession.title,
+    extent.number,
+    enumeration_value.value
+    FROM
+    accession
         LEFT JOIN
-        extent ON accession.id = extent.accession_id
+    extent ON accession.id = extent.accession_id
         LEFT JOIN
-        enumeration_value ON extent.extent_type_id = enumeration_value.id
-      WHERE
-        repo_id = 2
+    enumeration_value ON extent.extent_type_id = enumeration_value.id
+    WHERE
+    repo_id = 2
         AND accession.accession_date >= #{db.literal(@from.split(' ')[0].gsub('-', ''))}
         AND accession.accession_date <= #{db.literal(@to.split(' ')[0].gsub('-', ''))}
         AND NOT enumeration_value.value LIKE '%linear%'"

@@ -53,7 +53,7 @@ class AccessionListOfAcquiredAccessions < AbstractReport
     ev5.value AS processing_priority,
     ev6.value AS processing_status,
     collection_management.processing_hours_total AS 'total_processing_hours'
-FROM
+    FROM
     accession
         LEFT JOIN
     collection_management ON accession.id = collection_management.accession_id
@@ -73,11 +73,11 @@ FROM
     enumeration_value ev5 ON collection_management.processing_priority_id = ev5.id
         LEFT JOIN
     enumeration_value ev6 ON collection_management.processing_status_id = ev6.id
-WHERE
+    WHERE
     accession.accession_date >= #{db.literal(@from.split(' ')[0].gsub('-', ''))}
         AND accession.accession_date <= #{db.literal(@to.split(' ')[0].gsub('-', ''))}
         AND repo_id = 2
-ORDER BY accession.identifier"
+    ORDER BY accession.identifier"
   end
 
 #  def fix_row(row)

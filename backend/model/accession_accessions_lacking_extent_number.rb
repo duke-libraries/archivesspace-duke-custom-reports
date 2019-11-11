@@ -28,17 +28,17 @@ class AccessionAccessionsLackingExtentNumber < AbstractReport
     accession.title,
     extent.number,
     enumeration_value.value
-FROM
+    FROM
     accession
         LEFT JOIN
     extent ON accession.id = extent.accession_id
         LEFT JOIN
     enumeration_value ON extent.extent_type_id = enumeration_value.id
-WHERE
+    WHERE
     repo_id = 2
-    AND accession.accession_date >= #{db.literal(@from.split(' ')[0].gsub('-', ''))}
-    AND accession.accession_date <= #{db.literal(@to.split(' ')[0].gsub('-', ''))}
-    and enumeration_value.value is NULL"
+        AND accession.accession_date >= #{db.literal(@from.split(' ')[0].gsub('-', ''))}
+        AND accession.accession_date <= #{db.literal(@to.split(' ')[0].gsub('-', ''))}
+        AND enumeration_value.value IS NULL"
   end
 
 #  def fix_row(row)
