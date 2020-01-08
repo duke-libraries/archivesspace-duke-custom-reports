@@ -74,8 +74,8 @@ class AccessionListOfAcquiredAccessions < AbstractReport
           LEFT JOIN
       enumeration_value ev6 ON collection_management.processing_status_id = ev6.id
       WHERE
-      accession.accession_date > #{db.literal(@from.split(' ')[0].gsub('-', ''))}
-          AND accession.accession_date < #{db.literal(@to.split(' ')[0].gsub('-', ''))}
+      accession.accession_date >= #{db.literal(@from.split(' ')[0].gsub('-', ''))}
+          AND accession.accession_date <= #{db.literal(@to.split(' ')[0].gsub('-', ''))}
           AND repo_id = 2
       ORDER BY accession.identifier"
   end
