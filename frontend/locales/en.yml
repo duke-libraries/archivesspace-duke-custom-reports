@@ -1,30 +1,30 @@
 en:
   reports:
     accession_extent_accessioned_linear_feet_by_quarter:
-      title: Accessions - RL Extent Accessioned in Linear Feet by Quarter
+      title: RL Custom - Extent Accessioned in Linear Feet by Quarter
       description: Custom Rubenstein Library report on the extent of accessions acquired in linear feet during a specified date range. Results are grouped by quarter with RL vs UA stats separated. Used to populate metrics dashboard. Only reports on Rubenstein Repository (/repositories/2). Ignores any accessions without Linear Foot measurement. Need to QC accessions before running.
       identifier_prefix: Accession
     accession_level1_accessioned_by_quarter:
-      title: Accessions - RL Level 1 Accessions by Quarter
+      title: RL Custom - Level 1 Accessions by Quarter
       description: Custom Rubenstein Library report on the number and extent of Accessions processed to Level 1 during a specified date range. Results are grouped by quarter.
       identifier_prefix: Accession
     accession_new_and_level1_accessioned_by_quarter:
-      title: Accessions - RL New and Level 1 Accessions by Quarter
+      title: RL Custom - New and Level 1 Accessions by Quarter
       description: Custom Rubenstein Library report on the number and extent of new Accessions and Level 1 processed Accessions during a specified date range. Results are broken out by UA vs. RL and grouped by quarter
       identifier_prefix: Accession
     accession_extent_accessioned_by_research_center:
-      title: Accessions - RL Extent Accessioned by Research Center
+      title: RL Custom - Extent Accessioned by Research Center
       description: Extent of material accessioned by each RL Research Center during a specified time period
       identifier_prefix: Accession
     accession_accessions_lacking_extent_number:
-      title: Accessions - RL Accessions lacking an extent number (missing an extent)
+      title: RL Custom - Accessions lacking an extent number (missing an extent)
       description: Accessions lacking an extent subrecord
       identifier_prefix: Accession
     accession_accessions_lacking_extent_linear_feet:
-      title: Accessions - RL Accessions lacking extent measurement in Linear Feet
+      title: RL Custom - Accessions lacking extent measurement in Linear Feet
       description: Accessions lacking an extent measurement in Linear Feet
       identifier_prefix: Accession
     accession_list_of_acquired_accessions:
-      title: Accessions - RL list of acquired accessions
+      title: RL Custom - List of acquired accessions
       description: List of accessions acquired in a given time period (with extent, processing status, etc.)
       identifier_prefix: Accession

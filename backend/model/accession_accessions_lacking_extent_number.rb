@@ -18,13 +18,13 @@ class AccessionAccessionsLackingExtentNumber < AbstractReport
 
   def query
     results = db.fetch(query_string)
-    #info[:total_count] = results.count
+    info[:total_count] = results.count
     results
   end
 
   def query_string
     "SELECT 
-    accession.identifier,
+    accession.identifier as accession_number,
     accession.title,
     extent.number,
     enumeration_value.value
@@ -41,13 +41,13 @@ class AccessionAccessionsLackingExtentNumber < AbstractReport
         AND enumeration_value.value IS NULL"
   end
 
-#  def fix_row(row)
-#    ReportUtils.fix_identifier_format(row, :accession_number)
-#  end
+  def fix_row(row)
+    ReportUtils.fix_identifier_format(row, :accession_number)
+  end
 
-#  def identifier_field
-#    :accession_number
-#  end
+  def identifier_field
+    :accession_number
+  end
 
   def page_break
     false

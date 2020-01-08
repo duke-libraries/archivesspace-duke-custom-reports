@@ -24,7 +24,7 @@ class AccessionAccessionsLackingExtentLinearFeet < AbstractReport
 
   def query_string
       "SELECT 
-    accession.identifier,
+    accession.identifier as accession_number,
     accession.title,
     extent.number,
     enumeration_value.value
@@ -41,13 +41,13 @@ class AccessionAccessionsLackingExtentLinearFeet < AbstractReport
         AND NOT enumeration_value.value LIKE '%linear%'"
   end
 
-#  def fix_row(row)
-#    ReportUtils.fix_identifier_format(row, :accession_number)
-#  end
+  def fix_row(row)
+    ReportUtils.fix_identifier_format(row, :accession_number)
+  end
 
-#  def identifier_field
-#    :accession_number
-#  end
+  def identifier_field
+    :accession_number
+  end
 
   def page_break
     false
