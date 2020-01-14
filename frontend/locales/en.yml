@@ -17,7 +17,7 @@ en:
       description: Extent of material accessioned by each RL Research Center during a specified time period
       identifier_prefix: Accession
     accession_accessions_lacking_extent_number:
-      title: RL Custom - Accessions lacking an extent number (missing an extent)
+      title: RL Custom - Accessions Lacking an Extent Number (missing an extent)
       description: Accessions lacking an extent subrecord
       identifier_prefix: Accession
     accession_accessions_lacking_extent_linear_feet:
@@ -25,6 +25,14 @@ en:
       description: Accessions lacking an extent measurement in Linear Feet
       identifier_prefix: Accession
     accession_list_of_acquired_accessions:
-      title: RL Custom - List of acquired accessions
+      title: RL Custom - List of Acquired Accessions
       description: List of accessions acquired in a given time period (with extent, processing status, etc.)
+      identifier_prefix: Accession
+    accession_list_of_unprocessed_accessions:
+      title: RL Custom - List of Unprocessed Accessions
+      description: Displays accession number and title for accessions with a processing status of new_unprocessed.
+      identifier_prefix: Accession
+    accession_not_ready_for_ts:
+      title: RL Custom - List of Accessions Not Ready for TS
+      description: Displays accession number, title, and name of curator for accessions that have NOT been checked off as ready_for_TS.
       identifier_prefix: Accession

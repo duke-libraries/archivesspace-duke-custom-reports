@@ -18,7 +18,7 @@ class AccessionExtentAccessionedLinearFeetByQuarter < AbstractReport
 
   def query
     results = db.fetch(query_string)
-    info[:total_count] = results.count
+    #info[:total_count] = results.count
     results
   end
 
