@@ -30,7 +30,7 @@ en:
       identifier_prefix: Accession
     accession_list_of_unprocessed_accessions:
       title: RL Custom - List of Unprocessed Accessions
-      description: Displays accession number and title for accessions with a processing status of new_unprocessed.
+      description: Displays accession number and title for accessions with a processing status of new_unprocessed, in_progress, or NULL (empty).
       identifier_prefix: Accession
     accession_not_ready_for_ts:
       title: RL Custom - List of Accessions Not Ready for TS
